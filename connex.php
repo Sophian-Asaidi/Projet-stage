@@ -20,15 +20,16 @@ try {
         $requete->bindValue(":email", $email);
         $requete->bindValue(":mot_de_passe", $password);
         $requete->execute();
-
+        
+       
         // Vérification des résultats de la requête
         if ($requete->rowCount() > 0) {
             // Utilisateur trouvé, connexion réussie
-            header("Location: canaux/chat.php");
+            echo "<script>alert('Connexion réussie.'); window.location.href = 'canaux/chat.php';</script>";
             exit();
         } else {
             // Utilisateur non trouvé, échec de la connexion
-            header("Location: inscription.php");
+            echo "<script>alert('Veuillez-vous inscrire avant de vous connecter.'); window.location.href = 'inscription.php';</script>";
             exit();
         }
     }
