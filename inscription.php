@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mon Réseau Social - Inscription</title>
-    <link rel="stylesheet" href="inscription.css">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/inscription.css">
 </head>
 <body>
     <div class="container">
@@ -25,7 +25,17 @@
                     <label for="password">Mot de passe:</label>
                     <input type="password" name="password" id="password" required>
                 </div>
+                <div class="form-group">
+                    <label for="age">Âge:</label>
+                    <input type="number" name="age" id="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="ville">Ville:</label>
+                    <input type="text" name="ville" id="ville" required>
+                </div>
                 <button type="submit" class="btn">S'inscrire</button>
             </form>
         </div>
+    </div>
+</body>
 </html>

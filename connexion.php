@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Mon Réseau Social - Connexion</title>
-    <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="css/inscription.css">
 </head>
 <body>
     <div class="container">

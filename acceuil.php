@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Accueil - Mirage</title>
-    <link rel="stylesheet" href="acceuil.css">
+    <link rel="stylesheet" href="css/acceuil.css">
 </head>
 <body>
     <header>
