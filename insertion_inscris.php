@@ -41,8 +41,10 @@ try {
     // Exécution de la requête
     $requete->execute();
 
-    // Affichage du message d'inscription réussie en JavaScript et redirection vers la page d'inscription
-    echo "<script>alert('Votre inscription est réussie.'); window.location.href = 'inscription.php';</script>";
+    // Affichage du message d'inscription réussie en JavaScript et redirection vers la page demander.
+    echo "<script>alert('Votre inscription est réussie.'); window.location.href = 'thematique.php';</script>";
+    
+    
 } catch (PDOException $e) {
     echo "Erreur : " . $e->getMessage();
 }

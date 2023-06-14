@@ -8,7 +8,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="img/logo2.PNG" alt="Logo Mirage">
+                <img src="css/img/logo2.PNG" alt="Logo Mirage">
             </div>
             <nav>
                 <ul>

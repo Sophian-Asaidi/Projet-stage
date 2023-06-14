@@ -18,9 +18,15 @@ try {
     $anime = $_POST['anime'];
 
     // Préparation de la requête d'insertion
-    $requete = $conn->prepare("INSERT INTO thematique (sport, auteur, livre, film, serie, anime) VALUES (:sport, :auteur, :livre, :film, :serie, :anime)");
+    $requete = $conn->prepare("INSERT INTO thematique (ID, sport, auteur, livre, film, serie, anime) VALUES (:id, :sport, :auteur, :livre, :film, :serie, :anime)");
+
+    // Récupération de l'ID à partir de la table inscription
+    $requete_id = $conn->prepare("SELECT ID FROM inscription ORDER BY ID DESC LIMIT 1");
+    $requete_id->execute();
+    $id_inscription = $requete_id->fetchColumn();
 
     // Liaison des valeurs des variables aux paramètres de la requête
+    $requete->bindValue(":id", $id_inscription);
     $requete->bindValue(":sport", $sport);
     $requete->bindValue(":auteur", $auteur);
     $requete->bindValue(":livre", $livre);
@@ -31,7 +37,8 @@ try {
     // Exécution de la requête
     $requete->execute();
 
-    echo "Les informations ont été insérées avec succès dans la base de données.";
+    header("Location: canaux/chat.php");
+    exit();
 
 } catch(PDOException $e) {
     echo "Erreur : " . $e->getMessage();
