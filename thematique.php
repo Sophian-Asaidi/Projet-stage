@@ -39,29 +39,116 @@
             $(function () {
                 // Configuration de l'autocomplétion pour chaque champ
                 $("#sport").autocomplete({
-                    source: "autocomplet/autocomplete_sports.php"
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "autocomplet/autocomplete_sports.php",
+                            dataType: "json",
+                            data: {
+                                term: request.term
+                            },
+                            success: function (data) {
+                                var filteredOptions = $.grep(data, function (value) {
+                                    return value.toLowerCase().indexOf(request.term.toLowerCase()) !== -1;
+                                });
+                                response(filteredOptions);
+                            }
+                        });
+                    }
                 });
 
                 $("#auteur").autocomplete({
-                    source: "autocomplet/autocomplete_auteurs.php"
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "autocomplet/autocomplete_auteurs.php",
+                            dataType: "json",
+                            data: {
+                                term: request.term
+                            },
+                            success: function (data) {
+                                var filteredOptions = $.grep(data, function (value) {
+                                    return value.toLowerCase().indexOf(request.term.toLowerCase()) !== -1;
+                                });
+                                response(filteredOptions);
+                            }
+                        });
+                    }
                 });
 
                 $("#livre").autocomplete({
-                    source: "autocomplet/autocomplete_livres.php"
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "autocomplet/autocomplete_livres.php",
+                            dataType: "json",
+                            data: {
+                                term: request.term
+                            },
+                            success: function (data) {
+                                var filteredOptions = $.grep(data, function (value) {
+                                    return value.toLowerCase().indexOf(request.term.toLowerCase()) !== -1;
+                                });
+                                response(filteredOptions);
+                            }
+                        });
+                    }
                 });
 
                 $("#film").autocomplete({
-                    source: "autocomplet/autocomplete_films.php"
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "autocomplet/autocomplete_films.php",
+                            dataType: "json",
+                            data: {
+                                term: request.term
+                            },
+                            success: function (data) {
+                                var filteredOptions = $.grep(data, function (value) {
+                                    return value.toLowerCase().indexOf(request.term.toLowerCase()) !== -1;
+                                });
+                                response(filteredOptions);
+                            }
+                        });
+                    }
                 });
 
                 $("#serie").autocomplete({
-                    source: "autocomplet/autocomplete_series.php"
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "autocomplet/autocomplete_series.php",
+                            dataType: "json",
+                            data: {
+                                term: request.term
+                            },
+                            success: function (data) {
+                                var filteredOptions = $.grep(data, function (value) {
+                                    return value.toLowerCase().indexOf(request.term.toLowerCase()) !== -1;
+                                });
+                                response(filteredOptions);
+                            }
+                        });
+                    }
                 });
 
                 $("#anime").autocomplete({
-                    source: "autocomplet/autocomplete_animes.php"
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "autocomplet/autocomplete_animes.php",
+                            dataType: "json",
+                            data: {
+                                term: request.term
+                            },
+                            success: function (data) {
+                                var filteredOptions = $.grep(data, function (value) {
+                                    return value.toLowerCase().indexOf(request.term.toLowerCase()) !== -1;
+                                });
+                                response(filteredOptions);
+                            }
+                        });
+                    }
                 });
             });
+
+
+
         </script>
     </body>
 </html>
