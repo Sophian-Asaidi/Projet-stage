@@ -25,7 +25,7 @@ try {
         // Vérification des résultats de la requête
         if ($requete->rowCount() > 0) {
             // Utilisateur trouvé, connexion réussie
-            echo "<script>alert('Connexion réussie.'); window.location.href = 'canaux/chat.php';</script>";
+            echo "<script>alert('Connexion réussie.'); window.location.href = 'recherche/recherche.php';</script>";
             exit();
         } else {
             // Utilisateur non trouvé, échec de la connexion

@@ -1,0 +1,49 @@
+body {
+    background-color: #000;
+    background-image: url('logo2.png');
+    color: #fff;
+}
+
+.navbar {
+    background-color: #222;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #444;
+}
