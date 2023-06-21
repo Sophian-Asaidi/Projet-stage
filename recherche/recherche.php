@@ -12,8 +12,8 @@
             <a href="acceuil.php">Déconnexion</a>
         </nav>
         <div class="container">
-            <form class="search-form" action="results.php" method="GET">
-                <input class="search-input" type="text" name="query" placeholder="Rechercher...">
+            <form class="search-form" action="autocomplet.php" method="GET">
+                <input class="search-input" type="text" name="term" placeholder="Rechercher...">
                 <button class="search-button" type="submit">Rechercher</button>
             </form>
         </div>
